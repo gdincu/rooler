@@ -20,10 +20,10 @@ namespace Rooler {
 			int x = position.X;
 			int y = position.Y;
 
-			int left = ScreenCoordinates.FindNearestX(x, y - 5, y + 5, -1, screenshot).X + 1;
-			int right = ScreenCoordinates.FindNearestX(x, y - 5, y + 5, 1, screenshot).X;
-			int top = ScreenCoordinates.FindNearestY(x - 5, x + 5, y, -1, screenshot).Y + 1;
-			int bottom = ScreenCoordinates.FindNearestY(x - 5, x + 5, y, 1, screenshot).Y;
+			int left = ScreenCoordinates.FindNearestX(x, y, y + 1, -1, screenshot).X;
+			int right = ScreenCoordinates.FindNearestX(x, y, y + 1, 1, screenshot).X;
+			int top = ScreenCoordinates.FindNearestY(x, x + 1, y, -1, screenshot).Y;
+			int bottom = ScreenCoordinates.FindNearestY(x, x + 1, y, 1, screenshot).Y;
 
 			if (right > left && bottom > top)
 				return new IntRect(left, top, right - left, bottom - top);

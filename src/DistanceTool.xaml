@@ -33,23 +33,19 @@
 				<local:Dimensions x:Name="Dimensions" Text="100" Canvas.Top="-20"/>
 			</Canvas>
 			
-			<Grid HorizontalAlignment="Right" Margin="0,0,-5,0" x:Name="N">
-				<Rectangle Fill='{StaticResource Brush}' Width='10' Height='1' VerticalAlignment='Top'/>
+			<Grid HorizontalAlignment="Right" x:Name="N">
 				<Rectangle Fill='{StaticResource Brush}' Width='1' HorizontalAlignment='Center'/>
 			</Grid>
-			
-			<Grid HorizontalAlignment="Right" Margin="0,0,-5,0" x:Name="S" Grid.Row="1" >
-				<Rectangle Fill='{StaticResource Brush}' Width='10' Height='1' VerticalAlignment='Bottom'/>
+
+			<Grid HorizontalAlignment="Right" x:Name="S" Grid.Row="1" >
 				<Rectangle Fill='{StaticResource Brush}' Width='1' HorizontalAlignment='Center'/>
 			</Grid>
-			
-			<Grid x:Name="W" VerticalAlignment="Bottom" Margin="0,0,0,-5">
-				<Rectangle Fill='{StaticResource Brush}' Width='1' Height='10' HorizontalAlignment='Left' Grid.ColumnSpan='2'/>
+
+			<Grid x:Name="W" VerticalAlignment="Bottom">
 				<Rectangle Fill='{StaticResource Brush}' Height='1' VerticalAlignment='Center' Grid.ColumnSpan='2'/>
 			</Grid>
-			
-			<Grid x:Name="E" VerticalAlignment="Bottom" Margin="0,0,0,-5" Grid.Column="1">
-				<Rectangle Fill='{StaticResource Brush}' Width='1' Height='10' HorizontalAlignment='Right' Grid.ColumnSpan='2'/>
+
+			<Grid x:Name="E" VerticalAlignment="Bottom" Grid.Column="1">
 				<Rectangle Fill='{StaticResource Brush}' Height='1' VerticalAlignment='Center' Grid.ColumnSpan='2'/>
 			</Grid>
 			<Rectangle Fill='{StaticResource Brush}' Width='1' Height='8' HorizontalAlignment='Right' VerticalAlignment="Bottom" d:LayoutOverrides="GridBox" Margin="0,0,-0.5,-4"/>
