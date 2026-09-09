@@ -56,6 +56,13 @@ namespace Rooler {
 			}
 		}
 
+		protected override void OnActivated(EventArgs e) {
+			base.OnActivated(e);
+
+			if (this.currentService == null)
+				this.StartStretch(null, null);
+		}
+
 		protected override void OnDeactivated(EventArgs e) {
 
 			this.CurrentService = null;

@@ -13,8 +13,8 @@ namespace Rooler {
 
 		private ScreenShot[,] screenShots;
 		private IntRect bounds;
-		private int tileWidth = 200;
-		private int tileHeight = 200;
+		private int tileWidth = 600;
+		private int tileHeight = 600;
 
 
 		public VirtualizedScreenShot() {

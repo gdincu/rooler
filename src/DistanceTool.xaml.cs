@@ -19,6 +19,7 @@ namespace Rooler {
 
 		private IntPoint previousPoint = new IntPoint();
 		private IScreenShot screenshot;
+		private int lastUpdateTick;
 
 		public DistanceTool(StretchMode stretch, IScreenServiceHost host): base(host) {
 			this.StretchMode = stretch;
@@ -54,8 +55,13 @@ namespace Rooler {
 		protected override void OnMouseMove(MouseEventArgs e) {
 			base.OnMouseMove(e);
 
-			if (!this.IsFrozen)
-				this.Update(false);
+			if (!this.IsFrozen) {
+				int now = Environment.TickCount;
+				if (now - this.lastUpdateTick >= 16) {
+					this.lastUpdateTick = now;
+					this.Update(false);
+				}
+			}
 		}
 
 		public override void Update() {
